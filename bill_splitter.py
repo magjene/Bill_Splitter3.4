@@ -1,26 +1,21 @@
 """
-Project Bill Splitter. Stage 3/4
+It's the right time to update your dictionary with new split values to make our "Who is lucky?" feature better. First, we need to recalculate the split value for everyone. Make sure that our lucky one pays 0.
 
-In this stage, you need to add a new feature to the project — pick one name from the dictionary at random; this person's share will be paid by others. Make it a lucky day for somebody!
+Recalculate the split value for n-1 people where n is the total length of the dictionary and update the values in the dictionary with the new split value for everyone.
 
-Make sure you give your users a choice whether they want to use this feature or not. Don't turn it on by default.
-
-After picking a random name, print it so that everyone knows who is the lucky one.
+If a user decides not to use the "Who is lucky" feature, print the original dictionary.
 
 Objectives
 In this stage your program should perform the following steps together with the steps from the previous stages:
 
 In case of an invalid number of people, "No one is joining for the party" is expected as an output;
-Otherwise, ask the user whether they want to use the "Who is lucky?" feature;
-Take input from the user;
-If a user wants to use the feature (Yes), choose a name from the
-dictionary keys at random and print the following: {Name} is the lucky one!;
-If the user enters anything else, print No one is going to be lucky.
-Do not print the output of the previous stage (see examples).
-
+Otherwise, if the user choice is Yes, re-split the bill according to the feature;
+Round the split value to two decimal places;
+Update the dictionary with new split values and 0 for the lucky person;
+Print the updated dictionary;
+If the user entered anything else instead of Yes, print the original dictionary.
 Examples
-The greater-than symbol followed by a space (> )
-represents the user input. Note that it's not part of the input.
+The greater-than symbol followed by a space (> ) represents the user input. Note that it's not part of the input.
 
 Example 1: The feature is used
 
@@ -41,6 +36,8 @@ Do you want to use the "Who is lucky?" feature? Write Yes/No:
 > Yes
 
 Jem is the lucky one!
+
+{'Marc': 25, 'Jem': 0, 'Monica': 25, 'Anna': 25, 'Jason': 25}
 Example 2: The feature is skipped
 
 Enter the number of friends joining (including you):
@@ -60,6 +57,8 @@ Do you want to use the "Who is lucky?" feature? Write Yes/No:
 > No
 
 No one is going to be lucky
+
+{'Marc': 20, 'Jem': 20, 'Monica': 20, 'Anna': 20, 'Jason': 20}
 Example 3: Invalid input
 
 Enter the number of friends joining (including you):
