@@ -77,4 +77,5 @@ else:
     d = {input(): 0 for _ in range(num)}
     bill = round(int(input('\nEnter the total bill value:\n')) / len(d), 2)
     d = {key: bill for key in d}
-    print(f'\n{d}')
+    want = input('\nDo you want to use the "Who is lucky?" feature? Write Yes/No:\n')
+    # print(f'\n{d}')
