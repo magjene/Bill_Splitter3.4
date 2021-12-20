@@ -74,11 +74,16 @@ if num <= 0:
 else:
     print('\nEnter the name of every friend (including you), each on a new line:')
     d = {input(): 0 for _ in range(num)}
-    bill = round(int(input('\nEnter the total bill value:\n')) / len(d), 2)
-    d = {key: bill for key in d}
+    bill = int(input('\nEnter the total bill value:\n'))
     want = input('\nDo you want to use the "Who is lucky?" feature? Write Yes/No:\n')
     if want == 'No':
-        print('No one is going to be lucky')
+        print('\nNo one is going to be lucky\n')
+        pay = round(bill / num, 2)
+        d = {key: pay for key in d}
     elif want == 'Yes':
         lucky = random.choice(list(d.keys()))
-        print(f'{lucky} is the lucky one!')
+        print(f'{lucky} is the lucky one!\n')
+        pay = round(bill / (num - 1), 2)
+        d = {key: pay for key in d}
+        d[lucky] = 0
+    print(d)
