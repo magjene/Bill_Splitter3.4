@@ -81,5 +81,5 @@ else:
     if want == 'No':
         print('No one is going to be lucky')
     elif want == 'Yes':
-        lucky = random.choice([key for key in d.keys()])
+        lucky = random.choice(list(d.keys()))
         print(lucky)
