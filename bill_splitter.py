@@ -78,4 +78,10 @@ else:
     bill = round(int(input('\nEnter the total bill value:\n')) / len(d), 2)
     d = {key: bill for key in d}
     want = input('\nDo you want to use the "Who is lucky?" feature? Write Yes/No:\n')
+    if want == 'No':
+        print('No one is going to be lucky')
+    elif want == 'Yes':
+        lucky = random.choice([key for key in d.keys()])
+        print(lucky)
+
     # print(f'\n{d}')
