@@ -67,6 +67,8 @@ Enter the number of friends joining (including you):
 
 No one is joining for the party
 """
+import random
+
 num = int(input('Enter the number of friends joining (including you):\n'))
 if num <= 0:
     print('\nNo one is joining for the party')
