@@ -83,5 +83,3 @@ else:
     elif want == 'Yes':
         lucky = random.choice([key for key in d.keys()])
         print(lucky)
-
-    # print(f'\n{d}')
